@@ -40,31 +40,32 @@
     </toolkit:TransitionService.NavigationOutTransition>
     <phone:PhoneApplicationPage.Resources>
         
-		<mytoolkitpaging:BindableApplicationBar x:Key="PanoramaMain_News0AppBar" IsVisible="True" IsMenuEnabled="True" Mode="Minimized" BackgroundColor="{StaticResource CustomApplicationAppBarBackgroundBrush}" Opacity="0.99" ForegroundColor="White">
+		<mytoolkitpaging:BindableApplicationBar x:Key="PanoramaMain_News0AppBar" IsVisible="True" IsMenuEnabled="True" BackgroundColor="{StaticResource CustomApplicationAppBarBackgroundBrush}" Opacity="0.99" ForegroundColor="White">
 			<mytoolkitpaging:BindableApplicationBarIconButton x:Name="PanoramaMain_News0RefreshBtn" IconUri="/Images/Icons/Dark/Refresh.png" Text="{Binding Path=LocalizedResources.Refresh, Source={StaticResource LocalizedStrings}}" Command="{Binding RefreshMain_NewsListControlCollectionCommand}"  />
-			<mytoolkitpaging:BindableApplicationBarIconButton x:Name="PanoramaMain_News0SetLockScreenBtn" IconUri="/Images/Icons/Dark/SetLockScreen.png" Text="{Binding Path=LocalizedResources.SetLockScreen, Source={StaticResource LocalizedStrings}}" Command="{Binding SetLockScreenCommand}"  />
-			<mytoolkitpaging:BindableApplicationBar.MenuItems>
+			<!--<mytoolkitpaging:BindableApplicationBarIconButton x:Name="PanoramaMain_News0SetLockScreenBtn" IconUri="/Images/Icons/Dark/SetLockScreen.png" Text="{Binding Path=LocalizedResources.SetLockScreen, Source={StaticResource LocalizedStrings}}" Command="{Binding SetLockScreenCommand}"  />-->
+            <mytoolkitpaging:BindableApplicationBarIconButton x:Name="PanoramaMain_News0AbouthBtn" IconUri="/Images/Icons/Dark/question.png" Text="{Binding Path=LocalizedResources.About, Source={StaticResource LocalizedStrings}}" Command="{Binding AboutCommand}"  />
+			<!--<mytoolkitpaging:BindableApplicationBar.MenuItems>
 				<mytoolkitpaging:BindableApplicationBarMenuItem x:Name="PanoramaMain_News0AboutBtn" Text="{Binding Path=LocalizedResources.About, Source={StaticResource LocalizedStrings}}" Command="{Binding AboutCommand}"/>
-			</mytoolkitpaging:BindableApplicationBar.MenuItems>		
+			</mytoolkitpaging:BindableApplicationBar.MenuItems>-->		
 		</mytoolkitpaging:BindableApplicationBar>	
         
-		<mytoolkitpaging:BindableApplicationBar x:Key="PanoramaMain_News1AppBar" IsVisible="True" IsMenuEnabled="True" Mode="Minimized" BackgroundColor="{StaticResource CustomApplicationAppBarBackgroundBrush}" Opacity="0.99" ForegroundColor="White">
+		<mytoolkitpaging:BindableApplicationBar x:Key="PanoramaMain_News1AppBar" IsVisible="True" IsMenuEnabled="True" BackgroundColor="{StaticResource CustomApplicationAppBarBackgroundBrush}" Opacity="0.99" ForegroundColor="White">
 			<mytoolkitpaging:BindableApplicationBarIconButton x:Name="PanoramaMain_News1RefreshBtn" IconUri="/Images/Icons/Dark/Refresh.png" Text="{Binding Path=LocalizedResources.Refresh, Source={StaticResource LocalizedStrings}}" Command="{Binding RefreshNewsFeed_NewsListControlCollectionCommand}"  />
 		</mytoolkitpaging:BindableApplicationBar>	
         
-		<mytoolkitpaging:BindableApplicationBar x:Key="PanoramaMain_News2AppBar" IsVisible="True" IsMenuEnabled="True" Mode="Minimized" BackgroundColor="{StaticResource CustomApplicationAppBarBackgroundBrush}" Opacity="0.99" ForegroundColor="White">
+		<mytoolkitpaging:BindableApplicationBar x:Key="PanoramaMain_News2AppBar" IsVisible="True" IsMenuEnabled="True" BackgroundColor="{StaticResource CustomApplicationAppBarBackgroundBrush}" Opacity="0.99" ForegroundColor="White">
 			<mytoolkitpaging:BindableApplicationBarIconButton x:Name="PanoramaMain_News2RefreshBtn" IconUri="/Images/Icons/Dark/Refresh.png" Text="{Binding Path=LocalizedResources.Refresh, Source={StaticResource LocalizedStrings}}" Command="{Binding RefreshReviewsFeed_NewsListControlCollectionCommand}"  />
 		</mytoolkitpaging:BindableApplicationBar>	
         
-		<mytoolkitpaging:BindableApplicationBar x:Key="PanoramaMain_News3AppBar" IsVisible="True" IsMenuEnabled="True" Mode="Minimized" BackgroundColor="{StaticResource CustomApplicationAppBarBackgroundBrush}" Opacity="0.99" ForegroundColor="White">
+		<mytoolkitpaging:BindableApplicationBar x:Key="PanoramaMain_News3AppBar" IsVisible="True" IsMenuEnabled="True" BackgroundColor="{StaticResource CustomApplicationAppBarBackgroundBrush}" Opacity="0.99" ForegroundColor="White">
 			<mytoolkitpaging:BindableApplicationBarIconButton x:Name="PanoramaMain_News3RefreshBtn" IconUri="/Images/Icons/Dark/Refresh.png" Text="{Binding Path=LocalizedResources.Refresh, Source={StaticResource LocalizedStrings}}" Command="{Binding RefreshGiveawaysFeed_NewsListControlCollectionCommand}"  />
 		</mytoolkitpaging:BindableApplicationBar>	
         
-		<mytoolkitpaging:BindableApplicationBar x:Key="PanoramaMain_News4AppBar" IsVisible="True" IsMenuEnabled="True" Mode="Minimized" BackgroundColor="{StaticResource CustomApplicationAppBarBackgroundBrush}" Opacity="0.99" ForegroundColor="White">
+		<mytoolkitpaging:BindableApplicationBar x:Key="PanoramaMain_News4AppBar" IsVisible="True" IsMenuEnabled="True" BackgroundColor="{StaticResource CustomApplicationAppBarBackgroundBrush}" Opacity="0.99" ForegroundColor="White">
 			<mytoolkitpaging:BindableApplicationBarIconButton x:Name="PanoramaMain_News4RefreshBtn" IconUri="/Images/Icons/Dark/Refresh.png" Text="{Binding Path=LocalizedResources.Refresh, Source={StaticResource LocalizedStrings}}" Command="{Binding RefreshEditorialFeed_NewsListControlCollectionCommand}"  />
 		</mytoolkitpaging:BindableApplicationBar>	
         
-		<mytoolkitpaging:BindableApplicationBar x:Key="PanoramaMain_News5AppBar" IsVisible="True" IsMenuEnabled="True" Mode="Minimized" BackgroundColor="{StaticResource CustomApplicationAppBarBackgroundBrush}" Opacity="0.99" ForegroundColor="White">
+		<mytoolkitpaging:BindableApplicationBar x:Key="PanoramaMain_News5AppBar" IsVisible="True" IsMenuEnabled="True" BackgroundColor="{StaticResource CustomApplicationAppBarBackgroundBrush}" Opacity="0.99" ForegroundColor="White">
 			<mytoolkitpaging:BindableApplicationBarIconButton x:Name="PanoramaMain_News5RefreshBtn" IconUri="/Images/Icons/Dark/Refresh.png" Text="{Binding Path=LocalizedResources.Refresh, Source={StaticResource LocalizedStrings}}" Command="{Binding RefreshVideos_videosListControlCollectionCommand}"  />
 		</mytoolkitpaging:BindableApplicationBar>	
     </phone:PhoneApplicationPage.Resources>
