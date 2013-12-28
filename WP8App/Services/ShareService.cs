@@ -88,6 +88,10 @@ namespace WPAppStudio.Services
                 && Uri.IsWellFormedUriString(link, UriKind.Absolute))
                 result.Add(ShareTypeEnum.ShareLink);
 
+            if (!string.IsNullOrEmpty(title)
+                && !string.IsNullOrEmpty(message))
+                result.Add(ShareTypeEnum.ShareByEmail);
+
             // Commenting out because this seems to not be working 
             //if (!string.IsNullOrEmpty(image)
             //    && IsValidMedia(image))
@@ -99,10 +103,6 @@ namespace WPAppStudio.Services
             //    || !string.IsNullOrEmpty(message))
             //    result.Add(ShareTypeEnum.ShareStatus);
             // End commenting
-
-            if (!string.IsNullOrEmpty(title)
-                && !string.IsNullOrEmpty(message))
-                result.Add(ShareTypeEnum.ShareByEmail);
 
             return result;
         }
