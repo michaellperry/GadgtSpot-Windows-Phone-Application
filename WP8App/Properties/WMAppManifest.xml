@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
+  <DefaultLanguage xmlns="" code="en-US" />
+  <App xmlns="" ProductID="{35074d41-6405-4a5c-8708-f50fdd290999}" Title="GadgtSpot" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="" Description="This is the official app for the new tech blog GadgtSpot! Here at GadgtSpot, we specialize in reviews and interviews, and occasionally wander into the land of no-return; giveaways. We love to do editorials, and feature developers.
+We are a growing bunch," Publisher="" PublisherID="{e7d94c95-4681-45a0-a8b4-5df4e482fb9e}">
+    <IconPath IsRelative="true" IsResource="false">Images\Logo-242457de-80da-42c9-9fbb-98b5451c622c.png</IconPath>
+    <Capabilities>
+      <Capability Name="ID_CAP_NETWORKING"/>
+      <Capability Name="ID_CAP_SENSORS"/>
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT"/>
+      <Capability Name="ID_CAP_SPEECH_RECOGNITION" />
+      <Capability Name="ID_CAP_PHONEDIALER" />
+      <Capability Name="ID_CAP_LOCATION" />
+      <Capability Name="ID_CAP_PROXIMITY" />
+      <Capability Name="ID_CAP_IDENTITY_USER" />
+      <Capability Name="ID_CAP_MAP" />
+    </Capabilities>
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="View/Main_News.xaml" ActivationPolicy="Resume"/>
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="MyDoWapp" TaskName="_default">
+	    <TemplateFlip>
+          <SmallImageURI IsRelative="true" IsResource="false">Images/Logo-242457de-80da-42c9-9fbb-98b5451c622c.png</SmallImageURI>
+		  <Count>0</Count>
+		  <BackgroundImageURI IsRelative="true" IsResource="false">Images/Logo-242457de-80da-42c9-9fbb-98b5451c622c.png</BackgroundImageURI>
+          <Title>GadgtSpot</Title>
+          <BackContent>Your source for gadget news</BackContent>
+	      <BackBackgroundImageURI IsRelative="true" IsResource="false">Images/Tileback-4102b63c-df2d-4526-a46e-0d439a422923.png</BackBackgroundImageURI>
+          <BackTitle>GadgtSpot</BackTitle>
+		  		  <LargeBackgroundImageURI IsRelative="true" IsResource="false">Images/Logo-242457de-80da-42c9-9fbb-98b5451c622c.png</LargeBackgroundImageURI>
+		  <LargeBackBackgroundImageURI IsRelative="true" IsResource="false">Images/Tileback-4102b63c-df2d-4526-a46e-0d439a422923.png</LargeBackBackgroundImageURI>
+ 
+          <DeviceLockImageURI IsRelative="true" IsResource="false"></DeviceLockImageURI>
+          <HasLarge>True</HasLarge>		
+        </TemplateFlip>
+      </PrimaryToken>
+    </Tokens>
+    <Extensions>
+      <Extension ExtensionName="LockScreen_Notification_IconCount" ConsumerID="{111DFF24-AA15-4A96-8006-2BFF8122084F}" TaskID="_default" />
+      <Extension ExtensionName="LockScreen_Notification_TextField" ConsumerID="{111DFF24-AA15-4A96-8006-2BFF8122084F}" TaskID="_default" />
+      <Extension ExtensionName="LockScreen_Background" ConsumerID="{111DFF24-AA15-4A96-8006-2BFF8122084F}" TaskID="_default" />
+    </Extensions>
+    <ScreenResolutions>
+      <ScreenResolution Name="ID_RESOLUTION_WVGA" />
+      <ScreenResolution Name="ID_RESOLUTION_WXGA" />
+      <ScreenResolution Name="ID_RESOLUTION_HD720P" />
+    </ScreenResolutions>
+  </App>
+</Deployment>
