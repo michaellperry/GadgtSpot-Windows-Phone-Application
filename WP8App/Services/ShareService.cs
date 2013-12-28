@@ -166,7 +166,7 @@ namespace WPAppStudio.Services
             var shareLinkTask = new ShareLinkTask
             {
                 Title = title,
-                Message = message,
+                Message = title + " // via @GadgtSpot",
                 LinkUri = linkUri
             };
 
