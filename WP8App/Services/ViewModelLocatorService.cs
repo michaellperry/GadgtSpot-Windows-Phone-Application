@@ -47,6 +47,15 @@ namespace WPAppStudio.Services
             get { return _container.Resolve<IViewModels.IMain_NewsViewModel>(); }
         }
 
+
+        /// <summary>
+        /// Gets the reference to a Main_RecentViewModel.
+        /// </summary>
+        public IViewModels.IMain_RecentViewModel Main_RecentViewModel
+        {
+            get { return _container.Resolve<IViewModels.IMain_RecentViewModel>(); }
+        }
+
         /// <summary>
         /// Gets the reference to a Videos_DetailVideosViewModel.
         /// </summary>
