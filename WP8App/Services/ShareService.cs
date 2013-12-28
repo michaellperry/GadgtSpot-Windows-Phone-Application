@@ -88,13 +88,17 @@ namespace WPAppStudio.Services
                 && Uri.IsWellFormedUriString(link, UriKind.Absolute))
                 result.Add(ShareTypeEnum.ShareLink);
 
-            if (!string.IsNullOrEmpty(image)
-                && IsValidMedia(image))
-                result.Add(ShareTypeEnum.ShareImage);
+            // Commenting out because this seems to not be working 
+            //if (!string.IsNullOrEmpty(image)
+            //    && IsValidMedia(image))
+            //    result.Add(ShareTypeEnum.ShareImage);
+            // End commenting
 
-            if (!string.IsNullOrEmpty(title)
-                || !string.IsNullOrEmpty(message))
-                result.Add(ShareTypeEnum.ShareStatus);
+            // Commenting out because I don't want the Share Status to be there. Only link
+            //if (!string.IsNullOrEmpty(title)
+            //    || !string.IsNullOrEmpty(message))
+            //    result.Add(ShareTypeEnum.ShareStatus);
+            // End commenting
 
             if (!string.IsNullOrEmpty(title)
                 && !string.IsNullOrEmpty(message))
