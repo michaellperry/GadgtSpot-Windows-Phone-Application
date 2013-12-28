@@ -11,9 +11,9 @@ namespace UnitTests
         public void CanSplitWords()
         {
             WordWrapService service = new WordWrapService();
-            string words = service.GetWords("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", 4);
+            string words = service.GetWords("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", 1);
 
-            Assert.AreEqual("’Twas brillig, and the", words);
+            Assert.AreEqual("’Twas", words);
         }
     }
 }

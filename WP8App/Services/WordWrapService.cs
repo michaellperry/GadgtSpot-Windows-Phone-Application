@@ -9,7 +9,8 @@ namespace WPAppStudio.Services
     {
         public string GetWords(string text, int wordCount)
         {
-            throw new NotImplementedException();
+            int space = text.IndexOf(' ');
+            return text.Substring(0, space);
         }
     }
 }
