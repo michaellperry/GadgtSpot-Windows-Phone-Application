@@ -286,6 +286,8 @@
     <Compile Include="ViewModel\Base\DelegateCommand.cs" />
     <Compile Include="ViewModel\Base\INavigable.cs" />
     <Compile Include="ViewModel\Base\VMBase.cs" />
+    <Compile Include="ViewModel\Interfaces\IMain_RecentViewModel.cs" />
+    <Compile Include="ViewModel\Main_RecentViewModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
