@@ -129,9 +129,9 @@ namespace WPAppStudio.Services
                     case ShareTypeEnum.ShareImage:
                         ShareMedia(image);
                         break;
-                    case ShareTypeEnum.ShareStatus:
-                        ShareStatus(string.IsNullOrEmpty(message) ? title : message);
-                        break;
+                    //case ShareTypeEnum.ShareStatus:
+                    //    ShareStatus(string.IsNullOrEmpty(message) ? title : message);
+                    //    break;
                     case ShareTypeEnum.ShareByEmail:
                         ShareByEmail(title, message, link);
                         break;
@@ -177,13 +177,13 @@ namespace WPAppStudio.Services
         /// Executes the Share Status service.
         /// </summary>
         /// <param name="status">The status to share.</param>
-        private void ShareStatus(string status)
-        {
-            ShareStatusTask shareStatusTask = new ShareStatusTask();
-			shareStatusTask.Status = status;
+        //private void ShareStatus(string status)
+        //{
+        //    ShareStatusTask shareStatusTask = new ShareStatusTask();
+        //    shareStatusTask.Status = status;
 
-			shareStatusTask.Show();
-        }
+        //    shareStatusTask.Show();
+        //}
 		
 		/// <summary>
         /// Executes the Compose Mail service.
@@ -200,7 +200,7 @@ namespace WPAppStudio.Services
             if (string.IsNullOrEmpty(link))
                 emailComposeTask.Body = body;
             else
-                emailComposeTask.Body = string.Format("{0}{1}{1}{2}", body, Environment.NewLine, link);
+                emailComposeTask.Body = string.Format("{0}{1}{1}{2}{1}{1}Sent via the GadgtSpot.com Windows Phone app. Get it here <insert url to app>", subject, Environment.NewLine, link);
 
 			emailComposeTask.Show();
         }
