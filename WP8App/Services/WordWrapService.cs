@@ -8,11 +8,11 @@ namespace WPAppStudio.Services
 {
     public class WordWrapService
     {
-        private readonly ITextMeasurementService _textMeasurementService;
+        private readonly ITextMeasurementService _tms;
 
         public WordWrapService(ITextMeasurementService textMeasurementService)
         {
-            _textMeasurementService = textMeasurementService;
+            _tms = textMeasurementService;
         }
 
         public string GetWords(string text, int wordCount)
@@ -39,7 +39,9 @@ namespace WPAppStudio.Services
 
         public string GetLine(string text, int lineLength)
         {
-            throw new NotImplementedException();
+            string line = GetWords(text, 1);
+            int width = _tms.GetTextWidth(line);
+            return GetWords(text, 1);
         }
     }
 }
