@@ -48,6 +48,7 @@ namespace WPAppStudio.Ioc
 			_currentContainer.RegisterType<RepositoriesBase.IXmlDataSource, RepositoriesBase.XmlDataSource>();
 			_currentContainer.RegisterType<RepositoriesBase.IYoutubeDataSource, RepositoriesBase.YoutubeDataSource>();
             _currentContainer.RegisterType<IViewModels.IMain_NewsViewModel, ViewModels.Main_NewsViewModel>();
+            _currentContainer.RegisterType<IViewModels.IMain_RecentViewModel, ViewModels.Main_RecentViewModel>();
             _currentContainer.RegisterType<IViewModels.IVideos_DetailVideosViewModel, ViewModels.Videos_DetailVideosViewModel>();
             _currentContainer.RegisterType<IViewModels.IEditorialFeed_DetailViewModel, ViewModels.EditorialFeed_DetailViewModel>();
             _currentContainer.RegisterType<IViewModels.IGiveawaysFeed_DetailViewModel, ViewModels.GiveawaysFeed_DetailViewModel>();

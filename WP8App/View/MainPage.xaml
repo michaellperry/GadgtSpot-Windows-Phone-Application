@@ -18,7 +18,7 @@
     Foreground="{StaticResource CustomApplicationTextBrush}"
     SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
     shell:SystemTray.IsVisible="True"
-	DataContext="{Binding Path=Main_NewsViewModel, Source={StaticResource ViewModelLocator}}">
+	DataContext="{Binding Path=Main_RecentViewModel, Source={StaticResource ViewModelLocator}}">
     <toolkit:TransitionService.NavigationInTransition>
         <toolkit:NavigationInTransition>
             <toolkit:NavigationInTransition.Backward>
@@ -54,7 +54,7 @@
                     </StackPanel>
                 </phone:PanoramaItem.Header>
                 <Grid>
-                    <ProgressBar IsIndeterminate="True" Visibility="{Binding LoadingMain_NewsListControlCollection, Converter={StaticResource VisibilityConverter}}" />
+                    <ProgressBar IsIndeterminate="True" Visibility="{Binding LoadingMain_RecentListControlCollection, Converter={StaticResource VisibilityConverter}}" />
                     <ctl:LongListSelector x:Name="Main_RecentListControl" 
 					ItemsSource="{Binding Main_RecentListControlCollection}"
 					SelectedItem="{Binding SelectedMain_RecentListControlCollection, Mode=TwoWay}"
