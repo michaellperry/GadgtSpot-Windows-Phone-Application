@@ -42,5 +42,32 @@ namespace UnitTests
 
             Assert.AreEqual("’Twas brillig, and", words);
         }
+
+        [TestMethod]
+        public void CanGetTwelveWords()
+        {
+            WordWrapService service = new WordWrapService();
+            string words = service.GetWords("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", 12);
+
+            Assert.AreEqual("’Twas brillig, and the slithy toves Did gyre and gimble in the", words);
+        }
+
+        [TestMethod]
+        public void CanGetThirteenWords()
+        {
+            WordWrapService service = new WordWrapService();
+            string words = service.GetWords("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", 12);
+
+            Assert.AreEqual("’Twas brillig, and the slithy toves Did gyre and gimble in the", words);
+        }
+
+        //[TestMethod]
+        //public void CanGetNintyNineWords()
+        //{
+        //    WordWrapService service = new WordWrapService();
+        //    string words = service.GetWords("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", 99);
+
+        //    Assert.AreEqual("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", words);
+        //}
     }
 }
