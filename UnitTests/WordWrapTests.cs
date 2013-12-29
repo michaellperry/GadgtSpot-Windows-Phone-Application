@@ -7,11 +7,22 @@ namespace UnitTests
     [TestClass]
     public class WordWrapTests
     {
+
+        
+        private WordWrapService _wws;
+
+        [TestInitialize]
+        public void Initialize() 
+        {
+            _wws = new WordWrapService();
+        }
+
+        private const string Saying = "’Twas brillig, and the slithy toves Did gyre and gimble in the wabe";
+
         [TestMethod]
         public void CanGetZeroWords()
         {
-            WordWrapService service = new WordWrapService();
-            string words = service.GetWords("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", 0);
+            string words = _wws.GetWords(Saying, 0);
 
             Assert.AreEqual("", words);
         }
@@ -19,8 +30,7 @@ namespace UnitTests
         [TestMethod]
         public void CanGetOneWord()
         {
-            WordWrapService service = new WordWrapService();
-            string words = service.GetWords("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", 1);
+            string words = _wws.GetWords(Saying, 1);
 
             Assert.AreEqual("’Twas", words);
         }
@@ -28,8 +38,7 @@ namespace UnitTests
         [TestMethod]
         public void CanGetTwoWords()
         {
-            WordWrapService service = new WordWrapService();
-            string words = service.GetWords("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", 2);
+            string words = _wws.GetWords(Saying, 2);
 
             Assert.AreEqual("’Twas brillig,", words);
         }
@@ -37,8 +46,7 @@ namespace UnitTests
         [TestMethod]
         public void CanGetThreeWords()
         {
-            WordWrapService service = new WordWrapService();
-            string words = service.GetWords("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", 3);
+            string words = _wws.GetWords(Saying, 3);
 
             Assert.AreEqual("’Twas brillig, and", words);
         }
@@ -46,8 +54,7 @@ namespace UnitTests
         [TestMethod]
         public void CanGetTwelveWords()
         {
-            WordWrapService service = new WordWrapService();
-            string words = service.GetWords("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", 12);
+            string words = _wws.GetWords(Saying, 12);
 
             Assert.AreEqual("’Twas brillig, and the slithy toves Did gyre and gimble in the", words);
         }
@@ -55,19 +62,25 @@ namespace UnitTests
         [TestMethod]
         public void CanGetThirteenWords()
         {
-            WordWrapService service = new WordWrapService();
-            string words = service.GetWords("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", 12);
+            string words = _wws.GetWords(Saying, 13);
 
-            Assert.AreEqual("’Twas brillig, and the slithy toves Did gyre and gimble in the", words);
+            Assert.AreEqual("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", words);
         }
 
-        //[TestMethod]
-        //public void CanGetNintyNineWords()
-        //{
-        //    WordWrapService service = new WordWrapService();
-        //    string words = service.GetWords("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", 99);
+        [TestMethod]
+        public void CanGetNintyNineWords()
+        {
+            string words = _wws.GetWords(Saying, 99);
 
-        //    Assert.AreEqual("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", words);
-        //}
+            Assert.AreEqual("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", words);
+        }
+
+        [TestMethod]
+        public void CanGetTenThousandWords()
+        {
+            string words = _wws.GetWords(Saying, 10000);
+
+            Assert.AreEqual("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", words);
+        }
     }
 }
