@@ -43,5 +43,13 @@ namespace UnitTests
 
             Assert.AreEqual("’Twas brillig, and", line);
         }
+
+        [TestMethod]
+        public void CanGetTenLines()
+        {
+            string line = _wws.GetLine(Saying, 550);
+
+            Assert.AreEqual("’Twas brillig, and the slithy toves Did gyre and gimble", line);
+        }
     }
 }
