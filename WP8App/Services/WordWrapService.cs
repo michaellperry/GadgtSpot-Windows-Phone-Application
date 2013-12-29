@@ -39,13 +39,16 @@ namespace WPAppStudio.Services
 
         public string GetLine(string text, int lineLength)
         {
-            string line = GetWords(text, 3);
-
-            int width = _tms.GetTextWidth(line);
-
-            if (width <= lineLength)
+            for (int wordCount = 10; wordCount > 0; wordCount--)
             {
-                return line;
+                string line = GetWords(text, wordCount);
+
+                int width = _tms.GetTextWidth(line);
+
+                if (width <= lineLength)
+                {
+                    return line;
+                }
             }
 
             return GetWords(text, 1);
