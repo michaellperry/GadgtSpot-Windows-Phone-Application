@@ -56,18 +56,27 @@ namespace UnitTests
         public void CanGetThirteenWords()
         {
             WordWrapService service = new WordWrapService();
-            string words = service.GetWords("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", 12);
+            string words = service.GetWords("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", 13);
 
-            Assert.AreEqual("’Twas brillig, and the slithy toves Did gyre and gimble in the", words);
+            Assert.AreEqual("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", words);
         }
 
-        //[TestMethod]
-        //public void CanGetNintyNineWords()
-        //{
-        //    WordWrapService service = new WordWrapService();
-        //    string words = service.GetWords("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", 99);
+        [TestMethod]
+        public void CanGetNintyNineWords()
+        {
+            WordWrapService service = new WordWrapService();
+            string words = service.GetWords("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", 99);
 
-        //    Assert.AreEqual("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", words);
-        //}
+            Assert.AreEqual("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", words);
+        }
+
+        [TestMethod]
+        public void CanGetTenThousandWords()
+        {
+            WordWrapService service = new WordWrapService();
+            string words = service.GetWords("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", 10000);
+
+            Assert.AreEqual("’Twas brillig, and the slithy toves Did gyre and gimble in the wabe", words);
+        }
     }
 }
