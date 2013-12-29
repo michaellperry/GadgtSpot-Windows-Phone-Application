@@ -39,7 +39,7 @@ namespace WPAppStudio.Services
 
         public string GetLine(string text, int lineLength)
         {
-            string line = GetWords(text, 2);
+            string line = GetWords(text, 3);
 
             int width = _tms.GetTextWidth(line);
 

@@ -31,9 +31,17 @@ namespace UnitTests
         [TestMethod]
         public void CanGetMediumLine()
         {
-            string line = _wws.GetLine(Saying, 200);
+            string line = _wws.GetLine(Saying, 140);
 
             Assert.AreEqual("’Twas brillig,", line);
+        }
+
+        [TestMethod]
+        public void CanGetThreeLines()
+        {
+            string line = _wws.GetLine(Saying, 180);
+
+            Assert.AreEqual("’Twas brillig, and", line);
         }
     }
 }
