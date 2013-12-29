@@ -5,7 +5,7 @@ using WPAppStudio.Services;
 namespace UnitTests
 {
     [TestClass]
-    public class WordWrapTests
+    public class WordCountTests
     {
 
         
@@ -14,7 +14,7 @@ namespace UnitTests
         [TestInitialize]
         public void Initialize() 
         {
-            _wws = new WordWrapService();
+            _wws = new WordWrapService(null);
         }
 
         private const string Saying = "’Twas brillig, and the slithy toves Did gyre and gimble in the wabe";

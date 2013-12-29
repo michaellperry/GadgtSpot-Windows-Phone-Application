@@ -2,11 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using WPAppStudio.Services.Interfaces;
 
 namespace WPAppStudio.Services
 {
     public class WordWrapService
     {
+        private readonly ITextMeasurementService _textMeasurementService;
+
+        public WordWrapService(ITextMeasurementService textMeasurementService)
+        {
+            _textMeasurementService = textMeasurementService;
+        }
+
         public string GetWords(string text, int wordCount)
         {
 
@@ -27,6 +35,11 @@ namespace WPAppStudio.Services
             }
 
             return result.ToString();
+        }
+
+        public string GetLine(string text, int lineLength)
+        {
+            throw new NotImplementedException();
         }
     }
 }

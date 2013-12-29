@@ -271,6 +271,7 @@
     <Compile Include="Services\Interfaces\INavigationService.cs" />
     <Compile Include="Services\Interfaces\IShareService.cs" />
     <Compile Include="Services\Interfaces\ISpeechService.cs" />
+    <Compile Include="Services\Interfaces\ITextMeasurementService.cs" />
     <Compile Include="Services\Interfaces\IWebBrowserService.cs" />
     <Compile Include="Services\LiveTileService.cs" />
     <Compile Include="Services\DialogServices.cs" />
